@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  text-align: center;
+  color: white;
+  padding: 10px 0;
+}
+
+h2 {
+  font-weight: 300;
+}
+
+a {
+  color: #4B4A67;
+}
