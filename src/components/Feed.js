@@ -23,16 +23,20 @@ height: 450px;
 padding: 0 30px;
 `;
 
-const Feed = ({title, data}) => {
+const Feed = ({title, data, searchQuery}) => {
+    const filteredItems = data.filter(item => {
+        return item.title.toString().toLowerCase().includes(searchQuery.toString().toLowerCase()); });
+
+    let defaultOrHighlightBg = (searchQuery === "" ? "transparent" : "yellow");
     return (<Card>
                 <CardTitle>{title}</CardTitle>
-                <CardContent>{data.map(item => {
-                    return <div key={item.id[0]}>
+                <CardContent>{
+                    filteredItems.map(item => {
+                    return <div key={item.id[0]} style={{backgroundColor: defaultOrHighlightBg}}>
                                 <a href={item.link[0].$.href} target="_blank" rel="noreferrer"><h4>{item.title}</h4></a>
                                 <span>{item.updated} by <i>{item.author[0].name}</i></span>
                                 <hr />
-                           </div>
-                    })}
+                        </div>})}
                 </CardContent>
             </Card>);
 };
