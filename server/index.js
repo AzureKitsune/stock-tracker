@@ -18,6 +18,14 @@ var subredditsData = [{
   name: "investing",
   online_url: "https://www.reddit.com/r/investing/.rss",
   local_url: "/data/investing.rss"
+}, {
+  name: "securityanalysis",
+  online_url: "https://www.reddit.com/r/securityanalysis/.rss?f=flair_name%3A%22News%22",
+  local_url: "/data/securityanalysis.rss"
+}, {
+  name: "stockmarket",
+  online_url: "https://www.reddit.com/r/stockmarket/.rss?f=flair_name%3A%22News%22",
+  local_url: "/data/stockmarket.rss"
 }];
 
 
